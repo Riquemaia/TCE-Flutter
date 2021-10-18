@@ -1,15 +1,14 @@
 import 'package:feneco_fiap_tce_app/feature/utils/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:skeleton_text/skeleton_text.dart';
 
-class MunicipioInfoStatus extends StatelessWidget {
-  const MunicipioInfoStatus({
+class MunicipioInfoStatusSkecketonLoader extends StatelessWidget {
+  const MunicipioInfoStatusSkecketonLoader({
     Key? key,
-    this.value = 0,
     this.label = 'Sem Texto',
     this.textColor = kPrimaryColor,
   }) : super(key: key);
 
-  final int? value;
   final String label;
   final Color textColor;
 
@@ -19,9 +18,17 @@ class MunicipioInfoStatus extends StatelessWidget {
       child: Column(
         children: [
           const Spacer(),
-          Text(
-            '$value',
-            style: TextStyle(color: textColor, fontSize: 50),
+          Center(
+            child: SkeletonAnimation(
+              borderRadius: BorderRadius.circular(10.0),
+              child: Container(
+                height: 75,
+                width: MediaQuery.of(context).size.width * 0.15,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    color: Colors.grey[300]),
+              ),
+            ),
           ),
           Text(
             label.toUpperCase(),

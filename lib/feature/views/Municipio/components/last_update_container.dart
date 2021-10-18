@@ -12,7 +12,7 @@ class LateUpdateContainer extends StatelessWidget {
     return Container(
       height: size.height * 0.13,
       width: double.infinity,
-      margin: EdgeInsets.symmetric(horizontal: 20.0),
+      margin: const EdgeInsets.symmetric(horizontal: 20.0),
       child: Align(
         alignment: FractionalOffset.bottomCenter,
         child: Padding(

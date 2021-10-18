@@ -10,6 +10,7 @@ import 'package:feneco_fiap_tce_app/feature/views_models/Municipio/municipio_vie
 
 import 'components/municipio_listview.dart';
 import 'components/municipio_top_bar.dart';
+import 'components/municipio_top_bar_skeleton_loader.dart';
 
 class MunicipioView extends StatelessWidget {
   MunicipioView({Key? key}) : super(key: key);
@@ -31,7 +32,7 @@ class MunicipioView extends StatelessWidget {
             Observer(
               builder: (_) {
                 return municipioViewModel.isLoading
-                    ? const CircularProgressIndicator(color: kPrimaryColor)
+                    ? const MunicipioTopBarSkecketonLoader()
                     : MunicipioTopBar(municipioViewModel: municipioViewModel);
               },
             ),
