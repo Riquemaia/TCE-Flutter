@@ -1,4 +1,4 @@
-# drinks_app
+# feneco_fiap_tce_app
 
 A new Flutter project.
 
