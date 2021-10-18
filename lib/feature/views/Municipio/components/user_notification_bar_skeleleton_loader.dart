@@ -40,20 +40,25 @@ class UserNotificationBarSckeletonLoader extends StatelessWidget {
                     horizontal: 10,
                   ),
                   child: SvgPicture.asset(
-                      "assets/icons/ic_notifications_24px.svg"),
+                    "assets/icons/ic_notifications_24px.svg",
+                    width: 20,
+                  ),
                 ),
               ),
               InkWell(
-                  onTap: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const WelcomeScreen(),
-                      ),
-                    );
-                  },
-                  child:
-                      SvgPicture.asset("assets/icons/ic_exit_to_app_24px.svg")),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const WelcomeScreen(),
+                    ),
+                  );
+                },
+                child: SvgPicture.asset(
+                  "assets/icons/ic_exit_to_app_24px.svg",
+                  width: 20,
+                ),
+              ),
             ],
           ),
         ),
