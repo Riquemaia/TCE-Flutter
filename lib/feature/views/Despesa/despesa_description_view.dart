@@ -16,17 +16,58 @@ class DespesaDescriptionView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: kPrimaryColor,
       ),
-      body: Column(
-        children: [
-          Text(despesa.orgao.toString()),
-          Text(despesa.nmFornecedor.toString()),
-          Text(despesa.valorDespesa.toString()),
-          Text(despesa.idFornecedor.toString()),
-          Text(despesa.dataEmissaoDespesa.toString()),
-          Text(despesa.numeroEmpenho.toString()),
-          Text(despesa.mes.toString()),
-        ],
+      body: Center(
+        child: Column(
+          children: [
+            Spacer(),
+            Text(
+              despesa.orgao.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.mes.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.evento.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.numeroEmpenho.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.idFornecedor.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.nmFornecedor.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              despesa.dataEmissaoDespesa.toString(),
+              style: style(22.0),
+            ),
+            Spacer(),
+            Text(
+              'R\$ ${despesa.valorDespesa.toString()}',
+              style: style(22.0),
+            ),
+            Spacer(),
+          ],
+        ),
       ),
     );
   }
+
+  TextStyle style(double? size) => TextStyle(
+        color: kPrimaryColor,
+        fontSize: size,
+      );
 }

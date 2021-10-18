@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:feneco_fiap_tce_app/feature/utils/constants.dart';
 import 'package:feneco_fiap_tce_app/feature/views/Welcome/welcome_view.dart';
 import 'package:flutter/material.dart';
@@ -39,7 +37,12 @@ class UserNotificationBar extends StatelessWidget {
               ),
               InkWell(
                   onTap: () {
-                    exit(0);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcomeScreen(),
+                      ),
+                    );
                   },
                   child:
                       SvgPicture.asset("assets/icons/ic_exit_to_app_24px.svg")),
